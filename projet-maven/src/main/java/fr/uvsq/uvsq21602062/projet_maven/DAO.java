@@ -3,7 +3,7 @@ package fr.uvsq.uvsq21602062.projet_maven;
 import java.util.ArrayList;
 
 /**
- * Interface implementant le design patern DAO.
+ * Interface implementant le patron de conception DAO.
  * @author jean
  *
  */
