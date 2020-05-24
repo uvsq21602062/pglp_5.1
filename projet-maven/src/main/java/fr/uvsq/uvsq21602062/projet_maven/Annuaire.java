@@ -1,5 +1,6 @@
 package fr.uvsq.uvsq21602062.projet_maven;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -8,7 +9,9 @@ import java.util.Iterator;
  * @author jean
  *
  */
-public class Annuaire {
+public class Annuaire implements Serializable{
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Attribut liste stockant les groupes d'employé par leur hierarchie.
 	 */
@@ -43,7 +46,7 @@ public class Annuaire {
 		// Ajout dans la liste groupé par fonction
 		boolean succes = false;
 		for (int i = 0; i<this.listeGroupeFonction.size() && !succes; i++) {
-			if(this.listeGroupeFonction.get(i).obtenir().getFonction() == p.getFonction()) {
+			if(this.listeGroupeFonction.get(i).obtenir().getFonction().equals(p.getFonction())) {
 				this.listeGroupeFonction.get(i).ajouter(p);
 				succes = true;
 			}

@@ -1,5 +1,6 @@
 package fr.uvsq.uvsq21602062.projet_maven;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -9,7 +10,8 @@ import java.util.Iterator;
  * @author jean
  *
  */
-public class CompositePersonnel {
+public class CompositePersonnel implements Serializable{
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Collection de Personnel
 	 */

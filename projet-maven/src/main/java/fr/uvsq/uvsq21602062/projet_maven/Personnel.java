@@ -1,5 +1,6 @@
 package fr.uvsq.uvsq21602062.projet_maven;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -7,7 +8,9 @@ import java.time.LocalDate;
  * @author jean
  *
  */
-public final class Personnel {
+public final class Personnel implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Attribut contenant le nom
 	 */

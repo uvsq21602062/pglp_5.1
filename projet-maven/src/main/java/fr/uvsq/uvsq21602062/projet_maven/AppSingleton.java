@@ -31,6 +31,8 @@ public class AppSingleton {
 	
 	public void run() {
 		System.out.println("Bonjour");
+		
+		PersonnelDAO pDAO = new PersonnelDAO();
 		Annuaire a = new Annuaire();
 		Personnel p1 = new Personnel
 				.Builder("Dupont", "François")
@@ -50,6 +52,10 @@ public class AppSingleton {
 				.fonction("Assistant")
 				.numeroTel("0600343321")
 				.build();
+		
+		pDAO.ajouter(p1);
+		pDAO.ajouter(p2);
+		pDAO.ajouter(p3);
 		
 		a.ajouter(p1, 0);
 		a.ajouter(p2, 1);
